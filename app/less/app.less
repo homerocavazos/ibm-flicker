@@ -1,0 +1,157 @@
+@import (css) "../../node_modules/bootstrap/dist/css/bootstrap.css";
+@import (css) "../css/flat-ui.min.css";
+
+@bg-color-light-grey: #fbfafa;
+@ibm-yellow: #f9ca00;
+@yellow: #f7ea20;
+@dark-grey:#222;
+
+html {
+  margin: 20px auto;
+  position: relative;
+  min-height: 100%;
+  overflow-y: scroll;
+  box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  font-family:  Helvetica, Arial, sans-serif;
+  
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  height: auto;
+  padding-top: 200px;
+  padding-bottom: 20px;
+  background-color: @ibm-yellow;
+}
+
+
+
+ul {
+  list-style: none;
+  li {
+    a {
+      
+      padding: 5px 10px;
+      display: inline-block;
+      border-radius: 20px;
+      text-decoration: none !important;
+      background-color: #464646;
+      color: #fff;
+
+      &:hover {
+        color: #fff;
+        text-decoration: none;
+        background-color: @ibm-yellow;
+      } 
+      &:visited, &:active ,&:hover{
+        color: @ibm-yellow;
+        text-decoration: none;
+         background-color:#464646;
+      }  
+    }
+
+  }
+}
+
+h1 {
+  color: @ibm-yellow;
+  font-size: 30px;
+  font-weight: 800;
+  span {
+    font-weight: normal;
+    color: #fff;
+    font-family: Helvetica;
+  }
+}
+
+// Bootstrap overrides
+.container {
+  .row {
+    margin-left: 0px;
+    position: relative;
+  }
+}
+
+
+.btn-toolbar {
+  margin-left: -5px;
+  margin-bottom: 20px;
+}
+.btn-warning {
+  color: @dark-grey;
+  background-color: @ibm-yellow;
+  &:visited {
+    color: @dark-grey;
+  }
+}
+
+.form-control, output {
+    margin: 20px 0;
+}
+
+
+.navbar-fixed-top {
+  top: 0;
+  border-width: 0 0 10px;
+}
+.navbar-inverse {
+  background-color: @dark-grey;
+  border-color: @ibm-yellow;
+}
+
+
+.navigation {
+  width: 100%;
+  background-color: @dark-grey;
+  position: fixed;
+  top:140px;
+  z-index: 1030;
+
+  p {
+    color: @ibm-yellow;
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 13px;
+    margin: 10px 0;
+  }
+
+}
+
+
+.card {
+  background-color: @ibm-yellow;
+  margin: 3px 0 0 0;
+
+  img {
+    border: 20px solid #ffd401;
+    display: inline-block;
+  }
+}
+
+.desc {
+  h3 {
+    text-transform: capitalize;
+    font-size: 20px;
+    color: #372e16;
+  }
+  p {
+    color: #372e16;
+    font-size: 14px;
+  }
+}
+
+
+
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+  body {
+    padding-top: 130px;
+  }
+  .navigation {
+    top:80px;
+  }
+
+}
